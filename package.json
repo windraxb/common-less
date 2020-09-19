@@ -1,15 +1,15 @@
 {
   "name": "@windraxb/common-less",
   "version": "1.0.0",
-  "description": "magicless is a collection of less mixins.",
+  "description": "a collection of less mixins.",
   "license": "MIT",
   "keywords": [
     "less",
-    "windraxb"
+    "windraxb",
     "common-less"
   ],
   "scripts": {
-
+    "release": "sh ./release.sh"
   },
   "bugs": {
     "url": "https://github.com/windraxb/common-less/issues"
