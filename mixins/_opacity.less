@@ -1,0 +1,12 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       透明度
+  */
+
+.opactiy(@opacity) {
+  opacity: @opacity;
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}

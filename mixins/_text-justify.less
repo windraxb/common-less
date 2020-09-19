@@ -1,0 +1,17 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       文字两端对齐
+  */
+
+.text-justify() {
+  text-align: justify;
+  text-align-last: justify;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}

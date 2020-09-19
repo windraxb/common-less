@@ -1,0 +1,18 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       文本选择
+  */
+
+.selection(@color: #b3d4fc) {
+  &::-moz-selection {
+    background: @color;
+    text-shadow: none;
+  }
+
+  &::selection {
+    background: @color;
+    text-shadow: none;
+  }
+}

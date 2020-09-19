@@ -1,0 +1,13 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       calc计算
+  * @param  String  @prop css属性
+  * @param  String  @val  计算表达式
+  * .calc(width, "100% - 20px");  width: calc(100% - 20px);
+  */
+
+.calc(@prop, @val) {
+  @{prop}: calc(~"@{val}");
+}

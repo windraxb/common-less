@@ -1,0 +1,29 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       loading
+  */
+
+.loading() {
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-name: base-loading;
+  animation-timing-function: linear;
+  border-radius: 99em;
+  border: 2px solid #ddd;
+  border-left-color: #666;
+  width: 16px;
+  height: 16px;
+  display: table-cell;
+  vertical-align: middle;
+
+  @keyframes base-loading {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg)
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       画圆(使用px转rem时，会存在精度丢失问题，导致图案不圆)
+  */
+.circle(@size, @backgroundColor) {
+  width: @size;
+  height: @size;
+  background-color: @backgroundColor;
+  [data-dpr="1"] & {
+    width: @size * 0.5;
+    height: @size * 0.5;
+  }
+  [data-dpr="3"] & {
+    width: @size * 1.5;
+    height: @size * 1.5;
+  }
+}

@@ -1,0 +1,20 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc 空白字符填充，中文对齐
+  */
+
+.blank-half() {
+  &::before {
+    content: '\2002';
+    speak: none;
+  }
+}
+
+.blank-full() {
+  &::before {
+    content: '\2003';
+    speak: none;
+  }
+}

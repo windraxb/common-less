@@ -1,0 +1,43 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       实现盒子的水平垂直居中
+  */
+
+//  translate
+/*
+ *  @param direction  both:全居中  horizontal: 水平居中  vertical：垂直居中
+ */
+.center-translate(@direction: both) {
+  position: absolute;
+
+  .direction() when (@direction = both) {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .direction() when (@direction = horizontal) {
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  .direction() when (@direction = vertical) {
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  .direction();
+}
+
+//  absolute  绝对居中（相对于固定宽高的容器）
+.center-absolute(@width, @height) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -(@width / 2);
+  margin-top: -(@height / 2);
+  width: @width;
+  height: @height;
+}

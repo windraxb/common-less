@@ -1,0 +1,14 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       webp的css北京兼容方案
+  */
+
+.webpbg(@url) {
+  background-image: url(@url);
+
+  .webpa & {
+    background-image: url("@{url}.webp");
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@windraxb/common-less",
+  "version": "1.0.0",
+  "description": "magicless is a collection of less mixins.",
+  "license": "MIT",
+  "keywords": [
+    "less",
+    "windraxb"
+    "common-less"
+  ],
+  "scripts": {
+
+  },
+  "bugs": {
+    "url": "https://github.com/windraxb/common-less/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/windraxb/common-less.git"
+  }
+}

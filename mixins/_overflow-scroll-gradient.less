@@ -1,0 +1,45 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       溢出滚动渐变
+  */
+.overflow-scroll-gradient(@position: top, @height: 25px, @gradient-color: white) {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: @height;
+    background: linear-gradient(rgba(255, 255, 255, .001), @gradient-color);
+    pointer-events: none;
+  }
+
+  //  top
+  & when (@position = top) {
+    &:after {
+      top: 0;
+    }
+  }
+
+  //  bottom
+  & when  (@position = bottom) {
+    &:after {
+      bottom: 0;
+    }
+  }
+
+  //  left
+  & when (@position = left) {
+    &:after {
+      left: 0;
+    }
+  }
+
+  //  right
+  & when (@position = right) {
+    &:after {
+      right: 0;
+    }
+  }
+}

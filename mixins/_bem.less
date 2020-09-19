@@ -1,0 +1,57 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc bem 写法（.block-name__element-name--modifier-name）
+  */
+
+//用法:
+//.block(product, {
+//  color: green;
+//
+//  .element(title, {
+//    color: black;
+//    .modifier(invalid, {
+//      font-size: 5px;
+//    });
+//  });
+//
+//  .modifier(invalid, {
+//    color: red;
+//  })
+//});
+
+//生成的代码
+//.product {
+//  color: green;
+//}
+//.product__title {
+//  color: black;
+//}
+//.product__title--invalid {
+//  font-size: 5px;
+//}
+//.product--invalid {
+//  color: red;
+//}
+
+@elementSeperator: __;
+@modifierSeperator: --;
+
+.b(@blockName; @content) {
+  @{blockName} {
+    @content();
+  }
+}
+
+.e(@elementName; @content) {
+  &@{elementSeperator}@{elementName}{
+    @content();
+  }
+}
+
+.m(@modifierName; @content) {
+  &@{modifierSeperator}@{modifierName} {
+    @content();
+  }
+}

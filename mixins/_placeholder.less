@@ -1,0 +1,33 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       文本占位符样式重置
+  */
+.placeholder(@color: @input-color-placeholder) {
+
+  &:-moz-placeholder {
+    color: @color;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color !important;
+  }
+
+  &::-ms-input-placeholder {
+    color: @color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+
+  &::placeholder {
+    color: @color;
+  }
+}

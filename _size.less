@@ -1,0 +1,15 @@
+/**
+  * @author     windraxb
+  * @date       2020-09-19
+  * @version    $
+  * @desc       定义宽高
+  */
+
+.size(@width; @height) {
+  width: @width;
+  height: @height
+}
+
+.square(@size) {
+  .size(@size; @size);
+}
